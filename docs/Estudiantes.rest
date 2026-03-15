@@ -1,0 +1,10 @@
+GET http://localhost:8000/api/students/1
+###
+POST http://localhost:8000/api/students
+Content-Type: application/json
+
+### 
+PUT  http://localhost:8000/api/students/1
+Content-Type: application/json
+###
+DELETE http://localhost:8000/api/students/1
