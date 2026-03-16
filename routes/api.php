@@ -2,10 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
-Route::get('/students', function () {
-    return ' obteniendo lista de  estudiantes';
-});
+Route::get('/students', [StudentController::class, 'index']);
 
 Route::get('/students/{id}', function () {
     return ' obteniendo un estudiante';
