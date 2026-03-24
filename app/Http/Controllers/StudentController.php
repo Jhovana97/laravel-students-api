@@ -34,12 +34,12 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'email' => 'requires|email',
-            'phone' => 'required',
-            'language' => 'required'
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:student',
+            'phone' => 'required|digits:10',
+            'language' => 'required| in:Español,Ingles,frances'
         ]);
-        if ($validator -> fails()) {
+        if ($validator -> fails()) { 
             $data =[
                 'message' => 'Error en la validacion de los datos',
                 'errors' => $validator -> errors(),

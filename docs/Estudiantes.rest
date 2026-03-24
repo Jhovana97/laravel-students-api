@@ -1,9 +1,13 @@
-GET http://localhost:8000/api/students/1
+GET http://localhost:8000/api/students/
 ###
 POST http://localhost:8000/api/students
 Content-Type: application/json
+
 {
-    
+    "name": "Jhovana",
+    "email": "jhovana@example.com",
+    "phone": "1234567891",
+    "language": "Ingles"
 }
 
 ### 
